@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM <br>Is <br>Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -52,14 +52,16 @@ let newA = document.createElement("a");
 let newP = document.createElement("a");
 newA.style.color = 'green';
 newP.style.color = 'green';
+newA.style.cursor = 'pointer';
+newP.style.cursor = 'pointer';
 newA.textContent = 'Append';
 newP.textContent = 'Prepend';
 navBar.append(newA);
 navBar.prepend(newP);
 
 // ==================================
-let ctaText = document.querySelector('.cta-text h1');
-ctaText.textContent = siteContent['cta']['h1'];
+let ctaText = document.querySelector('h1');
+ctaText.innerHTML = siteContent['cta']['h1'];
 
 // ==================================
 
